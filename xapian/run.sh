@@ -2,6 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source ${DIR}/../configs.sh
+export LD_LIBRARY_PATH=${DIR}/xapian-core-1.2.13/install/lib:${LD_LIBRARY_PATH}
 
 NSERVERS=1
 QPS=500
