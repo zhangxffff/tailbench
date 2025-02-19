@@ -1,11 +1,11 @@
 AR = ar
 CC = gcc
-CXX = g++ -std=gnu++0x
+CXX = g++
 CFLAGS = -g -W -Wall -O3
 DEPSDIR := .deps
 DEPCFLAGS = -MD -MF $(DEPSDIR)/$*.d -MP
 ifeq ($(strip $(MEMMGR)), )
-  MEMMGR = -ljemalloc
+  MEMMGR = -ltcmalloc_minimal
 endif
 ifneq ($(strip $(KEYSWAP)), )
   CFLAGS += -DKEYSWAP
@@ -16,7 +16,7 @@ endif
 ifneq ($(strip $(NOSUPERPAGE)), )
   CFLAGS += -DNOSUPERPAGE
 endif
-LIBS = -lnuma  -lpthread -lm
+LIBS =  -lpthread -lm
 LDFLAGS = 
 
 all: test_atomics mtd mtclient mttest
@@ -73,7 +73,7 @@ configure config.h.in: configure.ac
 	touch config.h.in
 
 config.status: configure
-	./configure  '--enable-max-key-len=1024' '--disable-assertions' '--disable-invariants' '--disable-preconditions' '--with-malloc=jemalloc'
+	./configure  '--prefix=/home/zhangxffff/tailbench-v0.9/silo/masstree/install'
 
 $(DEPSDIR)/stamp:
 	mkdir -p $(DEPSDIR)

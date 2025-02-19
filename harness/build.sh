@@ -1,3 +1,3 @@
 #!/bin/bash
 
-make -j16
+JDK_PATH=/usr/lib/jvm/default-java make -j16

@@ -11,13 +11,13 @@
 #define CACHE_LINE_SIZE 64
 
 /* Define to enable debugging assertions. */
-/* #undef ENABLE_ASSERTIONS */
+#define ENABLE_ASSERTIONS 1
 
 /* Define to enable invariant assertions. */
-#define ENABLE_INVARIANTS 0
+/* #undef ENABLE_INVARIANTS */
 
 /* Define to enable precondition assertions. */
-#define ENABLE_PRECONDITIONS 0
+/* #undef ENABLE_PRECONDITIONS */
 
 /* Define to 1 if you have the `clock_gettime' function. */
 #define HAVE_CLOCK_GETTIME 1
@@ -64,10 +64,10 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define if you are using libjemalloc for malloc. */
-#define HAVE_JEMALLOC 1
+/* #undef HAVE_JEMALLOC */
 
 /* Define if you have libnuma. */
-#define HAVE_LIBNUMA 1
+/* #undef HAVE_LIBNUMA */
 
 /* Define to 1 if the system has the type `long long'. */
 #define HAVE_LONG_LONG 1
@@ -85,7 +85,7 @@
 #define HAVE_MEMORY_H 1
 
 /* Define to 1 if you have the <numa.h> header file. */
-#define HAVE_NUMA_H 1
+/* #undef HAVE_NUMA_H */
 
 /* Define if off_t and long are the same type. */
 #define HAVE_OFF_T_IS_LONG 1
@@ -115,7 +115,7 @@
 #define HAVE_STD_IS_RVALUE_REFERENCE 1
 
 /* Define if you have the std::is_trivially_copyable template. */
-/* #undef HAVE_STD_IS_TRIVIALLY_COPYABLE */
+#define HAVE_STD_IS_TRIVIALLY_COPYABLE 1
 
 /* Define to 1 if you have the <strings.h> header file. */
 #define HAVE_STRINGS_H 1
@@ -136,7 +136,7 @@
 #define HAVE_SYS_TYPES_H 1
 
 /* Define if you are using libtcmalloc for malloc. */
-/* #undef HAVE_TCMALLOC */
+#define HAVE_TCMALLOC 1
 
 /* Define to 1 if you have the <time.h> header file. */
 #define HAVE_TIME_H 1
@@ -220,7 +220,7 @@
 #define HAVE___SYNC_VAL_COMPARE_AND_SWAP_8 1
 
 /* Maximum key length */
-#define MASSTREE_MAXKEYLEN 1024
+#define MASSTREE_MAXKEYLEN 255
 
 /* Define if the default row type is value_timed_array. */
 /* #undef MASSTREE_ROW_TYPE_ARRAY */

@@ -4,6 +4,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source ${DIR}/../configs.sh
 
 TBENCH_PATH=../harness
+JDK_PATH=/usr/lib/jvm/java-8-openjdk-arm64/
 
 # Compile client module
 g++ -std=c++0x -g -O3 -fPIC -I${TBENCH_PATH} -c client.cpp -o client.o
